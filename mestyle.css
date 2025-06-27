@@ -1,20 +1,43 @@
 body {
   font-family: 'Microsoft YaHei UI', Andale, sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+
+}
+
+
+
+
+.root {
+  justify-content: center;
+  margin: auto;
+  height: 100%
+}
+
+header {
+  text-align: center;
 
 
 }
 
-.menu {
+nav {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0;
+
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     background-color: #333;
-
-    position: -webkit-sticky;
-    /* Safari */
-    position: sticky;
-    top: 0;
+    overflow: auto
   }
 
   li {
@@ -78,16 +101,21 @@ body {
 .contentimg {
   border-radius: 50px;
   padding: 20px;
-  width: 200px;
-  height: 150px;
+  max-width: 200px;
+  margin: 0 0 0 15px;
 }
+
+
+
 
 table,
 th {
   border: 1px solid black;
   border-collapse: collapse;
   padding: 8px;
+  line-height: 27px
 }
+
 
 td,
 tr {
@@ -98,4 +126,37 @@ tr {
 
 tr:hover {
   background-color: #D6EEEE;
+}
+
+.dark-mode table,
+.dark-mode th,
+.dark-mode .tablehead,
+.dark-mode td {
+  border: 1px solid white;
+}
+
+.dark-mode tr:hover {
+  background-color: rgb(8, 66, 8)
+}
+
+
+.dark-mode a:link {
+ color: rgb(145, 232, 145);
+}
+.dark-mode a:visited{
+  color: rgb(1, 151, 1);
+}
+.dark-mode a:active {
+color: rgb(213, 26, 213);
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px
+  }
+  .contentimg {
+    max-width: 100px;
+  }
+
+  ;
 }
