@@ -141,22 +141,64 @@ tr:hover {
 
 
 .dark-mode a:link {
- color: rgb(145, 232, 145);
+  color: rgb(145, 232, 145);
 }
-.dark-mode a:visited{
+
+.dark-mode a:visited {
   color: rgb(1, 151, 1);
 }
+
 .dark-mode a:active {
-color: rgb(213, 26, 213);
+  color: rgb(213, 26, 213);
 }
+
+
+
+
 
 @media only screen and (max-width: 600px) {
   body {
     font-size: 14px
   }
+
   .contentimg {
     max-width: 100px;
   }
 
   ;
+}
+
+@media (prefers-color-scheme: dark) {
+
+
+
+  body {
+    background-color: black;
+    color: white;
+
+  }
+
+  table,
+  th,
+  .tablehead,
+  td {
+    border: 1px solid white;
+  }
+
+  tr:hover {
+    background-color: rgb(8, 66, 8)
+  }
+
+
+  a:link {
+    color: rgb(145, 232, 145);
+  }
+
+  a:visited {
+    color: rgb(1, 151, 1);
+  }
+
+  a:active {
+    color: rgb(213, 26, 213);
+  }
 }
